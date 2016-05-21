@@ -10,5 +10,14 @@
       <br />
       <h6>Mozesz przejsc na facebooka, jeśli chcesz: </h6>
       <a href= "https://www.facebook.com/">link </a>
+
+      {% for post in posts %}
+        <div>
+        <p>published: {{post.published_date}} </p>
+        <h1> <a href=""> {{ post.title }} </a> </h1>
+        <p> {{post.text|linebreaks }} </p>
+        </div>
+      {% endfor %}
+
     </body>
 </html>
